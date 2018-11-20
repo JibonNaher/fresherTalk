@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>fresherTalk</title>
+        <style>
+        * {
+            box-sizing: border-box;
+          }
+
+          .mainBody{
+            background-color: #CFDAED;
+          }
+
+          .navHeader{
+            overflow: hidden;
+            background-color:#FFFFFF;
+          }
+
+          .navHeader a {
+            float: left;
+            color: #3E4756;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+          }
+
+
+          .navHeaderRight {
+            float:right;
+          }
+          .navHeaderRight a {
+            padding: 10px;
+            margin: 10px;
+          }
+          .navHeaderRight a:hover {
+            background-color: #96ADCF;
+          }
+
+
+
+          @media screen and (max-width: 500px) {
+          .navHeader a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+          .navHeaderRight {
+            float: none;
+          }
+          }
+
+          .subscriptionDiv{
+            margin-top: 40px;
+            left:0; right:0;
+            top:0; bottom:0;
+            width: 50%;
+
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 2px;
+          }
+          #divID1{
+            padding-left: 15px;
+            color: #96ADCF;
+            font-size: 25px;
+          }
+          .checkboxDiv{
+            padding: 30px 70px;
+            text-align : left;
+          }
+          .checkboxInput{
+            padding-top:10px;
+            height: 15px;
+            width: 30px;
+          }
+          .checkboxText{
+            font-size: 22px;
+          }
+
+          .loginForm{
+            border: 1px solid #CFDAED;
+            border-radius: 1px;
+            flex: left;
+            width: 60%;
+         }
+
+          .inputLog{
+            width: 90%;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size:20px;
+            text-align: center;
+            border-color: #3E4756;
+            border-radius: 2px;
+          }
+          .button {
+            width: 50%;
+            border-color: #F2D1DA;
+            background-color: #F2D1DA;
+            padding: 10px 20px;
+            margin: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            border-radius: 8px;
+            color: #3E4756;
+          }
+          .button:hover {
+            background-color: #BA9AA3;
+          }
+          .headerClass{
+            color: #3E4756;
+            text-align: center;
+            font-size:50px;
+          }
+
+        </style>
+    </head>
+    <body class = "mainBody">
+        <div class = "navHeader">
+            <a href="#mainPage"> <img src="Images/logo_banner.png"> </a>
+            <div class = "navHeaderRight">
+                <a href="#myPage"> My Page </a>
+                <a href="#welcomPage"> Logout </a>
+            </div>
+        </div>
+        <center>
+          <div class = "subscriptionDiv">
+              <div id = "divID1">
+                  <center><h2>My subscription</h2></center>
+              </div>
+
+              <form class = "loginForm">
+                  <div class = "checkboxDiv">
+                    <input type="checkbox" class = "checkboxInput"><label class = "checkboxText">Accommodation</label><br>
+                    <input type="checkbox" class = "checkboxInput"><label class = "checkboxText">Restaurant</label><br>
+                    <input type="checkbox" class = "checkboxInput"><label class = "checkboxText">Transport</label><br>
+                    <input type="checkbox" class = "checkboxInput"><label class = "checkboxText">Academic Affairs</label><br>
+                    <input type="checkbox" class = "checkboxInput"><label class = "checkboxText">Other</label><br>
+                  </div>
+                  <div>
+                      <input type="button" class="button" value="SAVE">
+                  </div>
+              </form>
+          </div>
+        </center>
+    </body>
+</html>

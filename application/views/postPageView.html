@@ -1,0 +1,275 @@
+<html>
+    <head>
+        <title>fresherTalk</title>
+        <style>
+
+            * {
+                box-sizing: border-box;
+                font-family: helvetica;
+            }
+
+            .mainBody{
+                background-color: #CFDAED;
+            }
+
+            .navHeader{
+                overflow: hidden;
+                background-color:#FFFFFF;
+
+            }
+
+            .navHeader a {
+                float: left;
+                color: #3E4756;
+                text-align: center;
+                text-decoration: none;
+                font-size: 18px;
+                border-radius: 4px;
+            }
+
+
+            .navHeaderRight {
+                float:right;
+            }
+            .navHeaderRight a {
+                padding: 10px;
+                margin: 10px;
+            }
+            .navHeaderRight a:hover {
+                background-color: #96ADCF;
+            }
+
+
+
+            @media screen and (max-width: 600px) {
+              .navHeader a {
+                float: none;
+                display: block;
+                text-align: left;
+              }
+              .navHeaderRight {
+                float: none;
+              }
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+
+
+            .column {
+                float: left;
+                padding: 30px;
+                background-color: #FFFFFF;
+                margin-top: 50px;
+                margin-left: 2.5%;
+                margin-right: 2.5%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+            }
+
+
+            .center {
+                width: 70%;
+                min-width: 850px;
+                margin: 50px auto;
+            }
+
+
+            .postBut {
+                width: 10%;
+                min-width: 100px;
+                border-color: #9F8F82;
+                background-color: #FFFFFF;
+                padding: 7px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 20px;
+                color: #3E4756;
+            }
+            .postBut:hover {
+                background-color: #9F8F82;
+                color: #FFFFFF;
+            }
+
+
+
+
+            .lineB{
+                border:None;
+                border-bottom: 3px solid #3E4756;
+                margin: 20px 0px;
+            }
+
+
+            .headerF {
+                display: flex;
+                justify-content: space-between;
+                align-items:center;
+                width: 100%;
+                font-size: 40px;
+            }
+
+
+            .questionPane{
+                background-color: #F0F5F7;
+                margin: 10px;
+                padding: 30px;
+                flex-grow:2;
+                text-decoration: none;
+                border-radius: 2px;
+                font-size: 16px;
+            }
+
+            .questionPane > .lineB {
+                border-bottom: 1px solid #3E4756;
+                margin: 10px 0px;
+            }
+
+
+            .listTitle{
+                font-size:25px;
+                color: black;
+            }
+
+            .timeStamp{
+                font-size: 15px;
+                color:grey;
+            }
+
+
+            .upvote {
+                font-size: 16px;
+            }
+
+            .upvoteB{
+                background-color: #F0F5F7 ;
+                border-color: #9F8F82;
+            }
+
+            .postQ{
+                width:100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items:center;
+                margin:auto;
+                padding: 5px;
+                font-size: 20px;
+            }
+
+            .postQ.postButtons{
+                justify-content: flex-end;
+                flex-direction: row;
+                width:100%;
+            }
+
+            .postButtons > input, div{
+                margin: 0px 10px;
+            }
+
+            .writeTitle, .writeBody{
+                width: 100%;
+                padding: 10px 20px;
+                font-size:15px;
+                margin: 5px 0px;
+            }
+
+            .writeBody{
+                height: 160px;
+                resize: none;
+                padding: 20px;
+            }
+
+            .solvedB {
+                border-color: #9F8F82;
+                background-color: #FFFFFF;
+                padding: 10px 20px;
+                margin: 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 20px;
+                border-radius: 8px;
+                color: #3E4756;
+            }
+
+
+        </style>
+    </head>
+    <body class = "mainBody">
+        <div class = "navHeader">
+            <a href="#mainPage"> <img src="Images/logo_banner.png"> </a>
+            <div class = "navHeaderRight">
+                <a href="#myPage"> My Page </a>
+                <a href="#welcomPage"> Logout </a>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "column center">
+                <div class = "headerF">
+                    <img src ="Images/accomodation.png">
+                </div>
+                <div class = "lineB">
+                </div>
+
+                <div class = "questionPane">
+                    <span class="listTitle"> I have a question! </span> <span class="timeStamp"> 2018-11-11-20:33 </span>
+                    <div class = "lineB">
+                    </div>
+                    <div> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis augue lorem, porta egestas dapibus eget, pharetra at massa. Morbi vel lacus mattis, maximus odio placerat, pulvinar metus. Donec non nulla sed ligula pharetra porta. Fusce porta vestibulum dui, ut imperdiet est. Phasellus interdum nulla quis congue facilisis. Vestibulum pellentesque massa nec cursus molestie. Integer vitae finibus magna. Maecenas venenatis nunc ut nulla pellentesque tincidunt. Aenean feugiat mauris eu cursus euismod. Quisque vehicula convallis quam et tempus. Sed vel facilisis justo, id consectetur lectus. Maecenas mattis, arcu at sollicitudin accumsan, tellus sapien vestibulum quam, nec aliquam justo urna eget tortor. Curabitur commodo mi non odio interdum, ut feugiat ante dapibus. Etiam vel faucibus velit. Donec eget mi libero.
+                    </div>
+                </div>
+                <div class = "postQ postButtons">
+                    <button class = "solvedB" type="button"> MARK THIS QUESTION AS SOLVED </button>
+                    <button class = "postBut" type="button"> DELETE </button>
+                </div>
+
+
+                <div class = "lineB">
+                </div>
+
+                <div class = "questionPane">
+                    <div class = "headerF">
+                        <span class="timeStamp"> 2018-11-11-20:33 </span>
+                        <div class = "upvote">
+                            Upvotes: 12
+                            <button class = "upvoteB" type="button"> UPVOTE THIS POST </button>
+                        </div>
+                    </div>
+                    <div class = "lineB">
+                    </div>
+                    <div> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis augue lorem, porta egestas dapibus eget, pharetra at massa. Morbi vel lacus mattis, maximus odio placerat, pulvinar metus. Donec non nulla sed ligula pharetra porta. Fusce porta vestibulum dui, ut imperdiet est. Phasellus interdum nulla quis congue facilisis. Vestibulum pellentesque massa nec cursus molestie. Integer vitae finibus magna. Maecenas venenatis nunc ut nulla pellentesque tincidunt. Aenean feugiat mauris eu cursus euismod. Quisque vehicula convallis quam et tempus. Sed vel facilisis justo, id consectetur lectus. Maecenas mattis, arcu at sollicitudin accumsan, tellus sapien vestibulum quam, nec aliquam justo urna eget tortor. Curabitur commodo mi non odio interdum, ut feugiat ante dapibus. Etiam vel faucibus velit. Donec eget mi libero.
+                    </div>
+                </div>
+
+                <div class = "questionPane">
+                    <div class = "headerF">
+                        <span class="timeStamp"> 2018-11-11-20:33 </span>
+                        <div class = "upvote">
+                            Upvotes: 12
+                            <button class = "upvoteB" type="button"> DELETE THIS POST </button>
+                        </div>
+                    </div>
+                    <div class = "lineB">
+                    </div>
+                    <div> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis augue lorem, porta egestas dapibus eget, pharetra at massa. Morbi vel lacus mattis, maximus odio placerat, pulvinar metus. Donec non nulla sed ligula pharetra porta. Fusce porta vestibulum dui, ut imperdiet est. Phasellus interdum nulla quis congue facilisis. Vestibulum pellentesque massa nec cursus molestie. Integer vitae finibus magna. Maecenas venenatis nunc ut nulla pellentesque tincidunt. Aenean feugiat mauris eu cursus euismod. Quisque vehicula convallis quam et tempus. Sed vel facilisis justo, id consectetur lectus. Maecenas mattis, arcu at sollicitudin accumsan, tellus sapien vestibulum quam, nec aliquam justo urna eget tortor. Curabitur commodo mi non odio interdum, ut feugiat ante dapibus. Etiam vel faucibus velit. Donec eget mi libero.
+                    </div>
+                </div>
+
+                <div> Answer this question! </div>
+
+                <form class = "postQ">
+                    <textarea class = "writeBody" placeholder="Answer this question!" name ="postBody"> </textarea>
+                    <div class = "postQ postButtons">
+                        <input class = "postBut" type="submit" value="POST">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

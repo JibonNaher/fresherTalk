@@ -1,0 +1,252 @@
+<html>
+    <head>
+        <title>fresherTalk</title>
+            <style>
+            * {
+                box-sizing: border-box;
+                font-family: helvetica;
+            }
+
+            .mainBody{
+                background-color: #CFDAED;
+            }
+
+            .navHeader{
+                overflow: hidden;
+                background-color:#FFFFFF;
+
+            }
+
+            .navHeader a {
+                float: left;
+                color: #3E4756;
+                text-align: center;
+                text-decoration: none;
+                font-size: 18px;
+                border-radius: 4px;
+            }
+
+
+            .navHeaderRight {
+                float:right;
+            }
+            .navHeaderRight a {
+                padding: 10px;
+                margin: 10px;
+            }
+            .navHeaderRight a:hover {
+                background-color: #96ADCF;
+            }
+
+
+
+            @media screen and (max-width: 600px) {
+              .navHeader a {
+                float: none;
+                display: block;
+                text-align: left;
+              }
+              .navHeaderRight {
+                float: none;
+              }
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+
+
+            .column {
+                float: left;
+                padding: 30px;
+                background-color: #FFFFFF;
+                margin-top: 50px;
+                margin-left: 2.5%;
+                margin-right: 2.5%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+            }
+
+            .left {
+                flex-basis: 40%;
+                max-width: 700px;
+                min-width: 400px;
+
+            }
+
+
+            .right {
+                flex-basis: 50%;
+                flex-grow:2;
+                min-width: 650px;
+            }
+
+
+            .categoryH {
+                margin: 0px auto;
+            }
+
+            .left a{
+                background-color: #F0F5F7;
+                margin: 10px;
+                padding: 10px;
+                height: 60px;
+                flex-grow:2;
+                font-size:30px;
+                color: #3E4756;
+                text-decoration: none;
+            }
+
+            .left a:hover {
+                background-color: #3E4756;
+                color: #F0F5F7;
+            }
+
+
+            .searchBar{
+                width:80%;
+                flex-grow:2;
+                flex-shrink:0.1;
+                padding: 7px 20px;
+                font-size:20px;
+                text-align: center;
+                border: 2px solid #3E4756;
+            }
+
+            .headerClass{
+                color: #3E4756;
+                font-size:50px;
+            }
+
+            .searchBar:active{
+                border-bottom: 3px solid #BA3E60 ;
+            }
+            .searchBut {
+                width: 10%;
+                min-width: 100px;
+                border-color: #BA3E60 ;
+                background-color: #FFFFFF;
+                padding: 7px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 20px;
+                color: #3E4756;
+            }
+            .searchBut:hover {
+                background-color: #BA3E60 ;
+                color: #FFFFFF;
+            }
+
+
+            .lineB{
+                border:None;
+                border-bottom: 3px solid #3E4756;
+                margin: 20px 0px;
+            }
+
+
+            .headerF {
+                display: flex;
+                justify-content: space-between;
+                align-items:center;
+                width: 100%;
+                font-size: 20px;
+            }
+
+            .headerF a {
+                height: 40px;
+                color: #3E4756;
+                text-decoration: none;
+                padding: 10px;
+                background-color: #F0F5F7;
+                border-color: #BA3E60;
+                border-radius: 3px;
+            }
+
+            .headerF a:hover {
+               background-color: #BA3E60;
+               color: #F0F5F7;
+
+             }
+
+
+             .postlist{
+                 background-color: #F0F5F7;
+                 margin: 10px;
+                 padding: 15px;
+                 height: 60px;
+                 flex-grow:2;
+                 text-decoration: none;
+                 border-radius: 2px;
+             }
+
+
+
+             .urgent{
+                 background-color: #BA3E60;
+             }
+
+             .urgent > .timeStamp, .listTitle {
+                 color: #F0F5F7;
+             }
+
+             .listTitle{
+                 font-size:25px;
+                 color: black;
+             }
+
+             .timeStamp{
+                 font-size: 15px;
+                 color:grey;
+             }
+
+
+             .solved {
+                 background-color: #DDDDDD;
+             }
+
+        </style>
+
+    </head>
+    <body class = "mainBody">
+        <div class = "navHeader">
+            <a href="#mainPage"> <img src="Images/logo_banner.png"> </a>
+            <div class = "navHeaderRight">
+                <a href="#myPage"> My Page </a>
+                <a href="#welcomPage"> Logout </a>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "column left">
+                <div class = "categoryH"> <img src ="Images/categories.png"> </div>
+                <a href = ""> Accomodations </a>
+                <a href = ""> Restaurants </a>
+                <a href = ""> Transport </a>
+                <a href = ""> Academic Affairs </a>
+                <a href = ""> Other </a>
+            </div>
+
+            <div class = "column right">
+                <form class = "headerF">
+                    <input class = "searchBut" type="button" value ="Search">
+                    <input class = "searchBar" type="text" placeholder="Search for a keyword..." name="searchKey">
+                </form>
+                <div class = "lineB">
+                </div>
+                <div class = "headerF">
+                    <img src ="Images/subscription.png"> <a href= ""> MANAGE SUBSCRIPTIONS </a>
+                </div>
+                    <a class="postlist urgent" href = ""> <span class="listTitle"> I have a question! </span> <span class="timeStamp"> 2018-11-11-20:33 </span> </a>
+                    <a class="postlist urgent" href = ""> <span class="listTitle"> I have a question! </span> <span class="timeStamp"> 2018-11-11-20:33 </span> </a>
+                    <a class="postlist" href = ""> <span class="listTitle"> I have a question! </span> <span class="timeStamp"> 2018-11-11-20:33 </span> </a>
+                    <a class="postlist" href = ""> <span class="listTitle"> I have a question! </span> <span class="timeStamp"> 2018-11-11-20:33 </span> </a>
+                    <a class="postlist" href = ""> <span class="listTitle"> I have a question! </span> <span class="timeStamp"> 2018-11-11-20:33 </span> </a>
+
+            </div>
+        </div>
+    </body>
+</html>

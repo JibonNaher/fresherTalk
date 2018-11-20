@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+.mainBody{
+    background-color: #012359;
+}
+.backimgClass{
+    margin: 5%;
+    padding-bottom: 4%;
+    background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.9)), url("../Images/bg1.jpg");
+    background-size: 100%;
+}
+.row {
+    display: flex;
+}
+.column {
+    flex: 55%;
+}
+.column1{
+    padding-top: 8%;
+    padding-bottom: 2%;
+}
+.column2{
+    flex: 5%;
+    border-left: 3px solid darkblue;
+    margin-top: 5%;
+}
+.column3{
+    flex: 40%;
+}
+.column2r3{
+    color: darkblue;
+    padding-top: 10%;
+    padding-left: 55%;
+}
+.column2r4{
+    color: darkblue;
+    padding-top: 5%;
+    padding-left: 55%;
+}
+.label{
+    padding-left: 10%;
+    padding-right: 5%;
+}
+.label1{
+    padding-top: 40%;
+    padding-bottom: 5%;
+}
+.ID1{
+    flex: 5%;
+    font-size:1.5vw;
+    color: darkblue;
+}
+.inputc{
+    font-size:1.0vw;
+    text-align: center;
+    border-color: darkblue;
+    border-radius: 2px;
+}
+.button {
+    border-color: darkblue;
+    background-color: azure;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1vw;
+    border-radius: 8px;
+    color: darkblue;
+}
+.button:hover {
+    background-color: cornflowerblue;
+}
+.headerClass{
+    color: darkblue;
+    text-align: center;
+    font-size:4vw;
+}
+.imgClass{
+    padding-left: 2%;
+    padding-bottom: 5%;
+    width: 25%;
+    height: 25%;
+}
+.alert{
+    padding: 5%;
+    background-color: aliceblue;
+    border-color: red;
+    color: red;
+}

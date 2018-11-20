@@ -1,0 +1,308 @@
+<html>
+    <head>
+        <title>fresherTalk</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: helvetica;
+            }
+
+            .mainBody{
+                background-color: #CFDAED;
+            }
+
+            .navHeader{
+                overflow: hidden;
+                background-color:#FFFFFF;
+
+            }
+
+            .navHeader a {
+                float: left;
+                color: #3E4756;
+                text-align: center;
+                text-decoration: none;
+                font-size: 18px;
+                border-radius: 4px;
+            }
+
+
+            .navHeaderRight {
+                float:right;
+            }
+            .navHeaderRight a {
+                padding: 10px;
+                margin: 10px;
+            }
+            .navHeaderRight a:hover {
+                background-color: #96ADCF;
+            }
+
+
+
+            @media screen and (max-width: 600px) {
+              .navHeader a {
+                float: none;
+                display: block;
+                text-align: left;
+              }
+              .navHeaderRight {
+                float: none;
+              }
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+
+
+            .column {
+                float: left;
+                padding: 30px;
+                background-color: #FFFFFF;
+                margin-top: 50px;
+                margin-left: 2.5%;
+                margin-right: 2.5%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+            }
+
+
+            .center {
+                width: 70%;
+                min-width: 850px;
+                margin: 50px auto;
+            }
+
+
+            .searchBar{
+                width:80%;
+                flex-grow:2;
+                flex-shrink:0.1;
+                padding: 7px 20px;
+                font-size:20px;
+                text-align: center;
+                border: 2px solid #3E4756;
+            }
+
+            .searchBar:active{
+                border-bottom: 3px solid #BA3E60 ;
+            }
+            .searchBut {
+                width: 10%;
+                min-width: 100px;
+                border-color: #BA3E60 ;
+                background-color: #FFFFFF;
+                padding: 7px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 20px;
+                color: #3E4756;
+            }
+            .searchBut:hover {
+                background-color: #BA3E60 ;
+                color: #FFFFFF;
+            }
+
+
+            .lineB{
+                border:None;
+                border-bottom: 3px solid #3E4756;
+                margin: 20px 0px;
+            }
+
+            .headerF {
+                display: flex;
+                justify-content: space-between;
+                align-items:center;
+                width: 100%;
+                font-size: 40px;
+            }
+
+
+            .postlist{
+                background-color: #F0F5F7;
+                margin: 10px;
+                padding: 15px;
+                height: 60px;
+                flex-grow:2;
+                text-decoration: none;
+                border-radius: 2px;
+            }
+
+
+            .urgent{
+                background-color: #BA3E60;
+            }
+
+            .urgent > .timeStamp, .listTitle {
+                color: #F0F5F7;
+            }
+
+            .listTitle{
+                font-size:25px;
+                color: black;
+            }
+
+            .timeStamp{
+                font-size: 15px;
+                color:grey;
+            }
+
+
+            .solved {
+                background-color: #DDDDDD;
+            }
+
+
+            .pageNumber{
+                background-color:#F0F5F7;
+                margin:10px;
+                font-size: 20px;
+                text-decoration: None;
+            }
+
+            .pageNumber.currentlyOn {
+                background-color: #BA3E60;
+                color: #F0F5F7;
+            }
+
+            .navigateList{
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                width: 100%;
+
+            }
+
+
+            /* The switch - the box around the slider */
+            .switch {
+              position: relative;
+              display: inline-block;
+              width: 60px;
+              height: 34px;
+            }
+
+            /* Hide default HTML checkbox */
+            .switch input {
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+
+            /* The slider */
+            .slider {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #ccc;
+              -webkit-transition: .4s;
+              transition: .4s;
+            }
+
+            .slider:before {
+              position: absolute;
+              content: "";
+              height: 26px;
+              width: 26px;
+              left: 4px;
+              bottom: 4px;
+              background-color: white;
+              -webkit-transition: .4s;
+              transition: .4s;
+            }
+
+            input:checked + .slider {
+              background-color: #BA3E60;
+            }
+
+            input:focus + .slider {
+              box-shadow: 0 0 1px #BA3E60;
+            }
+
+            input:checked + .slider:before {
+              -webkit-transform: translateX(26px);
+              -ms-transform: translateX(26px);
+              transform: translateX(26px);
+            }
+
+            /* Rounded sliders */
+            .slider.round {
+              border-radius: 34px;
+            }
+
+            .slider.round:before {
+              border-radius: 50%;
+            }
+
+            .postQ{
+                width:100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items:center;
+                margin:auto;
+                padding: 5px;
+                font-size: 20px;
+            }
+
+            .postQ.postButtons{
+                justify-content: flex-end;
+                flex-direction: row;
+                width:100%;
+            }
+
+        </style>
+    </head>
+    <body class = "mainBody">
+        <div class = "navHeader">
+            <a href="#mainPage"> <img src="Images/logo_banner.png"> </a>
+            <div class = "navHeaderRight">
+                <a href="#myPage"> My Page </a>
+                <a href="#welcomPage"> Logout </a>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "column center">
+                <div class = "headerF">
+                    SEARCH RESULTS: ACCOMODATIONS
+
+                </div>
+                <div class = "lineB">
+                </div>
+                <form class = "headerF">
+                    <input class = "searchBut" type="button" value ="Search">
+                    <input class = "searchBar" type="text" placeholder="Search for a keyword..." name="searchKey">
+                </form>
+                <div class = "lineB">
+                </div>
+
+                <div class = "postQ postButtons">
+                    <div> SHOW URGENT QUESTIONS FIRST</div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <a class="postlist urgent" href = ""> <span class="listTitle"> I have a question! </span> <span class="timeStamp"> 2018-11-11-20:33 </span> </a>
+                <a class="postlist urgent" href = ""> <span class="listTitle"> I have a question! </span> <span class="timeStamp"> 2018-11-11-20:33 </span> </a>
+                <a class="postlist" href = ""> <span class="listTitle"> I have a question! </span> <span class="timeStamp"> 2018-11-11-20:33 </span> </a>
+                <a class="postlist" href = ""> <span class="listTitle"> I have a question! </span> <span class="timeStamp"> 2018-11-11-20:33 </span> </a>
+                <a class="postlist" href = ""> <span class="listTitle"> I have a question! </span> <span class="timeStamp"> 2018-11-11-20:33 </span> </a>
+                <div class = "navigateList">
+                    <a class = "pageNumber" href = ""> << </a>
+                    <a class = "pageNumber currentlyOn" href = ""> 1 </a>
+                    <a class = "pageNumber" href = ""> >> </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
