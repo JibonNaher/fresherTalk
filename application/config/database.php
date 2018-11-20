@@ -75,7 +75,8 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	//'hostname' => 'localhost',
+	'hostname' => 'freshertalk.herokuapp.com',
 	'username' => 'root',
 	'password' => '',
 	'database' => 'fresherTalkDatabase',
